@@ -43,13 +43,11 @@ class StackStrategy implements PalindromeStrategy {
             stack.push(c);
         }
 
-        // Compare with popped characters
         for (char c : normalized.toCharArray()) {
             if (c != stack.pop()) {
                 return false;
             }
         }
-
         return true;
     }
 }
